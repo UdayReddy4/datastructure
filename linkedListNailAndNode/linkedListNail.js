@@ -4,6 +4,7 @@ class SinglyLinkedListNode {
         this.next = null;
     }
 }
+
 function insertNodeAtTail(head, data) {
     if (!(head instanceof SinglyLinkedListNode)) {
         throw new Error('Invalid head parameter: head must be a SinglyLinkedListNode instance');
@@ -14,8 +15,6 @@ function insertNodeAtTail(head, data) {
     }
 
     const newNode = new SinglyLinkedListNode(data);
-
-}
     
     if (head === null) {
         head = newNode;
@@ -28,10 +27,7 @@ function insertNodeAtTail(head, data) {
         current.next = newNode;
     }
 
-    return head;
+    return head; 
+}
 
-
-    
-
-
-module.exports=insertNodeAtTail
+module.exports = insertNodeAtTail;
